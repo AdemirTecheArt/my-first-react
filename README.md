@@ -6,6 +6,14 @@ The goal of this project is to practice the fundamentals of React and start buil
 
 ---
 
+## 🌐 Live Demo
+
+The project is deployed on Vercel and can be accessed here:
+
+👉 https://my-first-react.vercel.app
+
+---
+
 ## 🚀 Tech Stack
 
 - React
@@ -30,6 +38,13 @@ The goal of this project is to practice the fundamentals of React and start buil
 - Add more components
 - Create forms and validations
 - Consume a public API
+
+---
+
+## 🚀 Deployment
+
+This project is continuously deployed using Vercel.
+Every push to the `main` branch triggers a new deployment.
 
 ---
 
