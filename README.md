@@ -10,7 +10,7 @@ The goal of this project is to practice the fundamentals of React and start buil
 
 The project is deployed on Vercel and can be accessed here:
 
-👉 https://my-first-react.vercel.app
+👉 https://my-first-react-by-me.vercel.app
 
 ---
 
