@@ -1,38 +1,41 @@
 import { useState } from 'react'
+import TaskForm from './components/TaskForm'
+import TaskList from './components/TaskList'
 
 function App() {
-  const [contador, setContador] = useState(0)
+  const [task, setTask] = useState('')
+  const [tasks, setTasks] = useState([])
 
-  function aumentar() {
-    setContador(contador + 1)
+  function handleAddTask() {
+    if (task.trim() === '') return
+
+    const newTask = {
+      id: Date.now(),
+      text: task,
+    }
+
+    setTasks([...tasks, newTask])
+    setTask('')
   }
 
-  function diminuir() {
-    setContador(contador - 1)
-  }
-
-  function zerar() {
-    setContador(0)
+  function handleRemoveTask(id) {
+    setTasks(tasks.filter(task => task.id !== id))
   }
 
   return (
-    <div style={{ padding: 20 }}>
-      <h1>Meu primeiro React</h1>
+    <div style={{ padding: 20, maxWidth: 400 }}>
+      <h1>To-Do List</h1>
 
-      <p>Contador: {contador}</p>
+      <TaskForm
+        task={task}
+        onChange={setTask}
+        onAdd={handleAddTask}
+      />
 
-      <button onClick={aumentar}>
-        Aumentar
-      </button>
-
-      <button onClick={diminuir}>
-        Diminuir
-      </button>
-
-      <button onClick={zerar}>
-        Zerar
-      </button>
-
+      <TaskList
+        tasks={tasks}
+        onRemove={handleRemoveTask}
+      />
     </div>
   )
 }
