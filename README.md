@@ -1,55 +1,50 @@
 # My First React App
 
-This is my first React project, built with Vite and React.
-
-The goal of this project is to practice the fundamentals of React and start building a public portfolio for international job opportunities.
+🔗 **Live Demo:** https://SEU-NOVO-LINK.vercel.app
 
 ---
 
-## 🌐 Live Demo
+## 📌 About the Project
 
-The project is deployed on Vercel and can be accessed here:
+This project started as a simple React counter and evolved into a fully functional To-Do List application.
 
-👉 https://my-first-react-by-me.vercel.app
+It demonstrates continuous improvement and understanding of core React concepts.
 
 ---
 
-## 🚀 Tech Stack
+## 🚀 Features
+
+- Add and remove tasks
+- Persistent storage using localStorage
+- Component-based architecture
+- Clean and responsive layout
+- Automatic deployment with Vercel
+
+---
+
+## 🛠 Tech Stack
 
 - React
 - Vite
 - JavaScript
 - Git & GitHub
+- Vercel
 
 ---
 
-## 🧠 What I practiced
+## 🧠 What I Practiced
 
-- React functional components
-- useState hook
-- Component communication with props
-- Basic user interaction (events)
-
----
-
-## 📈 Next steps
-
-- Improve UI and layout
-- Add more components
-- Create forms and validations
-- Consume a public API
-
----
-
-## 🚀 Deployment
-
-This project is continuously deployed using Vercel.
-Every push to the `main` branch triggers a new deployment.
+- useState and useEffect
+- Controlled inputs
+- Array state updates (immutability)
+- Component communication via props
+- Local persistence (localStorage)
+- Incremental refactoring
 
 ---
 
 ## 🌍 Author
 
-**Ademir Freitas**  
-Front-end developer in progress  
+Ademir Freitas  
+Front-end Developer in progress  
 Brazil 🇧🇷 | Open to international opportunities

@@ -1,10 +1,17 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import TaskForm from './components/TaskForm'
 import TaskList from './components/TaskList'
 
 function App() {
   const [task, setTask] = useState('')
-  const [tasks, setTasks] = useState([])
+  const [tasks, setTasks] = useState(() => {
+  const savedTasks = localStorage.getItem('tasks')
+  return savedTasks ? JSON.parse(savedTasks) : []
+})
+
+useEffect(() => {
+  localStorage.setItem('tasks', JSON.stringify(tasks))
+}, [tasks])
 
   function handleAddTask() {
     if (task.trim() === '') return
@@ -23,21 +30,21 @@ function App() {
   }
 
   return (
-    <div style={{ padding: 20, maxWidth: 400 }}>
+    <div className="container">
       <h1>To-Do List</h1>
-
+  
       <TaskForm
         task={task}
         onChange={setTask}
         onAdd={handleAddTask}
       />
-
+  
       <TaskList
         tasks={tasks}
         onRemove={handleRemoveTask}
       />
     </div>
-  )
+  )  
 }
 
 export default App
